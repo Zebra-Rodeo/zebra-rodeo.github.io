@@ -1,0 +1,26 @@
+title: Zebra Rodeo
+description: Digital works that serve people
+url: "https://zebra.rodeo"
+baseurl: ""
+lang: en
+
+permalink: /blog/:slug/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - .DS_Store
+  - README.md
