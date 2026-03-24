@@ -41,13 +41,17 @@ description: A small independent studio sharing what we learn running real campa
     color: rgba(255,255,255,0.28);
     letter-spacing: 0.03em;
   }
+  .post-list .post-meta-line {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.55rem;
+  }
   .post-list time {
     font-size: 0.78rem;
     color: rgba(255,255,255,0.28);
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    display: block;
-    margin-bottom: 0.55rem;
   }
   .post-list h2 {
     font-size: 1.1rem;
@@ -75,7 +79,7 @@ description: A small independent studio sharing what we learn running real campa
   {% for post in site.posts %}
   <li>
     <a href="{{ post.url }}">
-      <time>{{ post.date | date: "%B %d, %Y" }}</time><span class="read-time"> · {{ post.content | number_of_words | divided_by: 200 }} min read</span>
+      <div class="post-meta-line"><time>{{ post.date | date: "%B %d, %Y" }}</time><span class="read-time"> · {{ post.content | number_of_words | divided_by: 200 }} min read</span></div>
       <h2>{{ post.title }}</h2>
       {% if post.description %}
         <p class="excerpt">{{ post.description }}</p>
