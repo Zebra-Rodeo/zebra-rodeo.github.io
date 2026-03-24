@@ -38,9 +38,9 @@ Your onboarding needs to be built around conversion. We have observed consistent
 
 The goal of the first campaign is not to be profitable. The goal is to generate installs cheaply and learn what works.
 
-Run $20 per day per platform. We test Meta and TikTok simultaneously from day one. They reach different people through different content formats, and what converts on TikTok can look completely different from what converts on Meta. You want to understand both.
+Run €20 per day per platform. We test Meta and TikTok simultaneously from day one. They reach different people through different content formats, and what converts on TikTok can look completely different from what converts on Meta. You want to understand both.
 
-The metric to watch is CPI, Cost Per Install. For US users, we target below $1.20. US users cost more because they spend more. A $0.60 install from a market where subscriptions do not convert is worth less than a $1.10 install from someone with five active subscriptions on their phone. Cheap installs from the wrong market are not cheap at all. On Provenance, our install campaign runs at €0.78 per US install, well inside that threshold.
+The metric to watch is CPI, Cost Per Install. For US users, we target below €1.20. US users cost more because they spend more. A €0.60 install from a market where subscriptions do not convert is worth less than a €1.10 install from someone with five active subscriptions on their phone. Cheap installs from the wrong market are not cheap at all. On Provenance, our install campaign runs at €0.78 per US install, well inside that threshold.
 
 Run each creative for a minimum of 48 hours before drawing conclusions, maximum 72 hours. The temptation to kill a creative after a bad first day is real and almost always wrong. Algorithms need time to learn.
 
@@ -61,7 +61,7 @@ One thing that is critical here: Phase 2 uses the best creatives from Phase 1, s
 <figcaption>Both campaigns running in parallel on Meta: install at €0.78/install (€20/day) and trial at €13.64/trial start (€120/day).</figcaption>
 </figure>
 
-But you do not turn off your install campaign. This is important and it took us a while to understand why. The two campaigns serve different functions and they complement each other. The trial campaign is more expensive per event but generates fewer users overall. The install campaign continues feeding conversion data and paywall data into your product while staying cheap to run at $20 per day per platform.
+But you do not turn off your install campaign. This is important and it took us a while to understand why. The two campaigns serve different functions and they complement each other. The trial campaign is more expensive per event but generates fewer users overall. The install campaign continues feeding conversion data and paywall data into your product while staying cheap to run at €20 per day per platform.
 
 More importantly, your install campaign becomes what we think of as a creative academy. Here is how the loop works: you test a new creative for 48 hours on the install campaign. If the CPI is excellent, you graduate that creative into the trial campaign where real money gets made. Then you go back to the install campaign and start iterating to find the next winner. The install campaign is your testing ground, your nursery, your early warning system for creative fatigue.
 
@@ -69,7 +69,7 @@ This is why running both campaigns in parallel matters so much. The trial campai
 
 On the budget side: €20 per day for the install campaign and €100 per day minimum for the trial campaign. That is €120 per day per platform, roughly €3,600 per month. Starting with a single platform at that budget is perfectly reasonable and probably enough to get meaningful signal. Running Meta and TikTok in parallel doubles the spend but also doubles the learning surface.
 
-The other thing worth saying: the trial campaign is not a pure cost. It is generating revenue. As we showed with Provenance, a ROAS above 1.0x means the campaign is paying for itself as it runs. The €3,600 per month is an upfront investment, but one that starts returning relatively quickly if conversion is healthy. If you have a tighter budget, you can run with less — but the lower the daily spend, the longer you need to leave campaigns running before drawing conclusions. The algorithms need volume to learn.
+The other thing worth saying: the trial campaign is not a pure cost. It is generating revenue. The €3,600 per month is an upfront investment, but one that starts returning as soon as conversions come in. If you have a tighter budget, you can run with less — but the lower the daily spend, the longer you need to leave campaigns running before drawing conclusions. The algorithms need volume to learn.
 
 ---
 
@@ -92,6 +92,8 @@ Expected revenue per trial = 51.9% × €24.65 = €12.79
 ROAS = €12.79 / €13.64 = 0.94x
 
 We are just below break-even after one month of testing. Essentially at equilibrium. That is actually a reasonable place to be at this stage. We know the conversion rate is solid, the creative is finding the right audience, and the main lever now is bringing that cost per trial down through better creatives. Getting it from €13.64 to €12 would push ROAS above 1.0x and make the campaign cleanly profitable.
+
+To put the budget in perspective: at 0.94x ROAS on a €3,600/month spend, the campaign is generating roughly €3,384 in revenue. The actual net cost out of pocket is around €216 per month, not €3,600. The gross spend is the working capital you need to have available, but the real burn is much smaller when the campaign is close to break-even. A campaign at 1.2x ROAS on the same spend would be cash-positive by €720 per month, which changes the conversation entirely.
 
 Once you have a ROAS above 1.0x, scaling is straightforward in principle: increase the budget and watch unit economics. In practice, scaling changes your audience. The algorithm serves your best-converting users first, and as you increase spend it reaches deeper into a broader pool. Unit economics soften as you scale. This is expected and manageable, but you need to watch metrics closely as you push up budget. We will cover scaling in detail in a dedicated post.
 
