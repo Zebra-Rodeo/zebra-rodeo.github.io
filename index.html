@@ -1,25 +1,86 @@
 ---
 layout: default
-title: Zebra Rodeo
-description: Digital works that serve people
+title: Nocturne — Field Notes on Building Mobile Apps
+description: A small independent studio sharing what we learn running real campaigns with real money.
 ---
-<div style="margin-bottom:3rem">
-  <h1 style="font-size:2rem;font-weight:700;margin-bottom:0.5rem">Zebra Rodeo</h1>
-  <p style="color:rgba(255,255,255,0.5);font-size:1rem">Thoughts on building digital products.</p>
+<style>
+  .index-intro {
+    margin-bottom: 5rem;
+  }
+  .index-intro h1 {
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin-bottom: 0.9rem;
+    line-height: 1.3;
+  }
+  .index-intro p {
+    color: rgba(255,255,255,0.38);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    max-width: 440px;
+  }
+
+  .post-list {
+    list-style: none;
+    padding: 0;
+  }
+  .post-list li {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 2.25rem 0;
+  }
+  .post-list li:last-child {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .post-list a { display: block; }
+  .post-list a:hover h2 { opacity: 0.62; }
+
+  .post-list time {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.28);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.55rem;
+  }
+  .post-list h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+    transition: opacity 0.15s;
+  }
+  .post-list .excerpt {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.42);
+    line-height: 1.65;
+  }
+</style>
+
+<div class="index-intro">
+  <h1>Field Notes on Building Mobile Apps</h1>
+  <p>We are a small independent studio running real campaigns with real money and sharing what we observe. Not expertise — just honest reporting.</p>
 </div>
 
 {% if site.posts.size > 0 %}
-<ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:2rem">
+<ul class="post-list">
   {% for post in site.posts %}
   <li>
-    <a href="{{ post.url }}" style="text-decoration:none;color:white;display:block;padding:1.5rem;border:1px solid rgba(255,255,255,0.1);border-radius:8px;transition:border-color 0.2s" onmouseover="this.style.borderColor='rgba(255,255,255,0.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
-      <h2 style="font-size:1.2rem;font-weight:600;margin-bottom:0.4rem">{{ post.title }}</h2>
-      <time style="color:rgba(255,255,255,0.4);font-size:0.85rem">{{ post.date | date: "%B %d, %Y" }}</time>
-      {% if post.description %}<p style="color:rgba(255,255,255,0.6);font-size:0.9rem;margin-top:0.6rem;line-height:1.5">{{ post.description }}</p>{% elsif post.excerpt %}<p style="color:rgba(255,255,255,0.6);font-size:0.9rem;margin-top:0.6rem;line-height:1.5">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>{% endif %}
+    <a href="{{ post.url }}">
+      <time>{{ post.date | date: "%B %d, %Y" }}</time>
+      <h2>{{ post.title }}</h2>
+      {% if post.description %}
+        <p class="excerpt">{{ post.description }}</p>
+      {% elsif post.excerpt %}
+        <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+      {% endif %}
     </a>
   </li>
   {% endfor %}
 </ul>
 {% else %}
-<p style="color:rgba(255,255,255,0.4)">No posts yet. Check back soon.</p>
+<p style="color:rgba(255,255,255,0.22);font-size:0.9rem;padding:3rem 0">No posts yet.</p>
 {% endif %}
