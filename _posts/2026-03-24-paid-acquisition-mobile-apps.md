@@ -58,6 +58,11 @@ After a solid week of Phase 1, you have trial start events flowing through AppsF
 
 One thing that is critical here: Phase 2 uses the best creatives from Phase 1, specifically the ones with the best CPI, because if they drove cheap installs they are the ones most likely to drive cheap trials too. You are not starting from scratch, you are promoting your winners.
 
+<figure>
+<img src="/assets/images/provenance-meta-campaigns.png" alt="Meta campaigns for Provenance" style="background:#fff;border-radius:8px;padding:1rem;">
+<figcaption>Both campaigns running in parallel on Meta: install at €0.78/install (€20/day) and trial at €13.64/trial start (€120/day).</figcaption>
+</figure>
+
 But you do not turn off your install campaign. This is important and it took us a while to understand why. The two campaigns serve different functions and they complement each other. The trial campaign is more expensive per event but generates fewer users overall. The install campaign continues feeding conversion data and paywall data into your product while staying cheap to run at $20 per day per platform.
 
 More importantly, your install campaign becomes what we think of as a creative academy. Here is how the loop works: you test a new creative for 48 hours on the install campaign. If the CPI is excellent, you graduate that creative into the trial campaign where real money gets made. Then you go back to the install campaign and start iterating to find the next winner. The install campaign is your testing ground, your nursery, your early warning system for creative fatigue.
