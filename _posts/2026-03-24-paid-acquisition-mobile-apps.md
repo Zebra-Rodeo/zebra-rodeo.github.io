@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why We Pay to Get Users — and How We Know If It's Working"
+title: "Why We Pay to Get Users, and How We Know If It's Working"
 date: 2026-03-24
 description: "A practical look at paid acquisition for mobile apps: campaign setup, creative management, measuring profitability, and monitoring cohorts in real time."
 author: Arnaud Aubry
@@ -26,7 +26,7 @@ There is a version of the app launch story that sounds very clean. You build som
 
 The App Store search algorithm, like any recommendation system, feeds on data. It wants to see engagement, installs, people coming back. A new app has none of that. So the algorithm ignores it, which means fewer installs, which means less data, which means continued invisibility. It is a cold start problem and it is brutal.
 
-Paid acquisition is the way out. You buy a first wave of users. Those users leave reviews, generate engagement data, and give the algorithm something to work with. You are not buying users as an end goal — you are buying the minimum viable social proof that makes the organic engine start spinning.
+Paid acquisition is the way out. You buy a first wave of users. Those users leave reviews, generate engagement data, and give the algorithm something to work with. You are not buying users as an end goal. You are buying the minimum viable social proof that makes the organic engine start spinning.
 
 There is a second reason to run paid campaigns that is less obvious: you need data. If you never buy users, you genuinely do not know whether your product converts. You do not know what percentage of people who hit your paywall actually subscribe. You do not know your D1 retention. Paid acquisition is your measurement instrument as much as it is your growth engine.
 
@@ -40,13 +40,13 @@ Your onboarding needs to be built around conversion. We have observed consistent
 
 The goal of the first campaign is not to be profitable. The goal is to generate installs cheaply and learn what works.
 
-Run $20 per day per platform. We test Meta and TikTok simultaneously from day one — they reach different people through different content formats, and what converts on TikTok can look completely different from what converts on Meta. You want to understand both.
+Run $20 per day per platform. We test Meta and TikTok simultaneously from day one. They reach different people through different content formats, and what converts on TikTok can look completely different from what converts on Meta. You want to understand both.
 
 The metric to watch is CPI, Cost Per Install. For US users, we target below $1.20. US users cost more because they spend more. A $0.60 install from a market where subscriptions do not convert is worth less than a $1.10 install from someone with five active subscriptions on their phone. Cheap installs from the wrong market are not cheap at all. On Provenance, our install campaign runs at €0.78 per US install — well inside that threshold.
 
 Run each creative for a minimum of 48 hours before drawing conclusions, maximum 72 hours. The temptation to kill a creative after a bad first day is real and almost always wrong. Algorithms need time to learn.
 
-Here is something Phase 1 will teach you quickly: creatives burn out. An ad that performed brilliantly in week one starts losing its edge in week three. The audience has seen it. The algorithm has extracted what it can from it. This creative attrition is natural and relentless, and it means the work of finding and testing new creatives never stops. Phase 1 is not a launch event — it is a permanent infrastructure you will be running as long as you are spending money on ads.
+Here is something Phase 1 will teach you quickly: creatives burn out. An ad that performed brilliantly in week one starts losing its edge in week three. The audience has seen it. The algorithm has extracted what it can from it. This creative attrition is natural and relentless, and it means the work of finding and testing new creatives never stops. Phase 1 is not a launch event. It is a permanent infrastructure you will be running as long as you are spending money on ads.
 
 The signal you are looking for by the end of Phase 1 is roughly 7 to 10 percent of users starting a trial at the paywall. Below that, something in the onboarding or paywall needs work before you go further.
 
@@ -56,7 +56,7 @@ The signal you are looking for by the end of Phase 1 is roughly 7 to 10 percent 
 
 After a solid week of Phase 1, you have trial start events flowing through AppsFlyer. Now you feed those events back to Meta and TikTok and launch a second campaign, this time optimized for trial starts rather than installs.
 
-One thing that is critical here: Phase 2 uses the best creatives from Phase 1 — specifically the ones with the best CPI, because if they drove cheap installs they are the ones most likely to drive cheap trials too. You are not starting from scratch, you are promoting your winners.
+One thing that is critical here: Phase 2 uses the best creatives from Phase 1, specifically the ones with the best CPI, because if they drove cheap installs they are the ones most likely to drive cheap trials too. You are not starting from scratch, you are promoting your winners.
 
 But you do not turn off your install campaign. This is important and it took us a while to understand why. The two campaigns serve different functions and they complement each other. The trial campaign is more expensive per event but generates fewer users overall. The install campaign continues feeding conversion data and paywall data into your product while staying cheap to run at $20 per day per platform.
 
@@ -64,7 +64,7 @@ More importantly, your install campaign becomes what we think of as a creative a
 
 This is why running both campaigns in parallel matters so much. The trial campaign is your revenue engine. The install campaign is how you keep that engine fed with fresh material.
 
-On the budget side: we recommend $20 per day for the install campaign and $100 per day minimum for the trial campaign, per platform. With Meta and TikTok both running, that is $240 per day — roughly $3,600 per month to run this system properly. You can do it with less, but below a certain threshold the algorithms do not have enough daily spend to learn efficiently and results will be noisier.
+On the budget side: we recommend $20 per day for the install campaign and $100 per day minimum for the trial campaign, per platform. With Meta and TikTok both running, that is $240 per day, roughly $3,600 per month to run this system properly. You can do it with less, but below a certain threshold the algorithms do not have enough daily spend to learn efficiently and results will be noisier.
 
 ---
 
@@ -72,9 +72,9 @@ On the budget side: we recommend $20 per day for the install campaign and $100 p
 
 Before you think about scaling, you need to know whether what you are running is profitable at all. This is where a lot of people skip a step, and it is an expensive skip.
 
-The metric is ROAS: Return on Ad Spend. It is the simplest possible ratio — revenue generated divided by money spent on advertising. A ROAS of 1.0x means you are breaking even. Above it you are making money and you should probably spend more. Below it you are subsidizing your users and you need to understand why before going further.
+The metric is ROAS: Return on Ad Spend. It is the simplest possible ratio: revenue generated divided by money spent on advertising. A ROAS of 1.0x means you are breaking even. Above it you are making money and you should probably spend more. Below it you are subsidizing your users and you need to understand why before going further.
 
-Calculating ROAS for a subscription app requires a bit of care because you are not selling a product at a fixed price — you are selling a trial that may or may not convert. The formula we use is:
+Calculating ROAS for a subscription app requires a bit of care because you are not selling a product at a fixed price. You are selling a trial that may or may not convert. The formula we use is:
 
 Expected revenue per trial start = conversion rate × net revenue per subscription
 
@@ -86,26 +86,26 @@ Expected revenue per trial = 51.9% × €24.65 = €12.79
 
 ROAS = €12.79 / €13.64 = 0.94x
 
-We are just below break-even after one month of testing. Essentially at equilibrium. That is actually a reasonable place to be at this stage — we know the conversion rate is solid, the creative is finding the right audience, and the main lever now is bringing that cost per trial down through better creatives. Getting it from €13.64 to €12 would push ROAS above 1.0x and make the campaign cleanly profitable.
+We are just below break-even after one month of testing. Essentially at equilibrium. That is actually a reasonable place to be at this stage. We know the conversion rate is solid, the creative is finding the right audience, and the main lever now is bringing that cost per trial down through better creatives. Getting it from €13.64 to €12 would push ROAS above 1.0x and make the campaign cleanly profitable.
 
 Once you have a ROAS above 1.0x, scaling is straightforward in principle: increase the budget and watch unit economics. In practice, scaling changes your audience — the algorithm serves your best-converting users first, and as you increase spend it reaches deeper into a broader pool. Unit economics soften as you scale. This is expected and manageable, but you need to watch metrics closely as you push up budget. We will cover scaling in detail in a dedicated post.
 
-The harder operational problem is not scaling — it is visibility. With a 7-day free trial, you are blind for at least a week after any campaign change. You are spending money, trials are accumulating, but you do not know how many will convert until the trial period expires. And that is just the short-term blindness. The longer-term picture is more complex.
+The harder operational problem is not scaling. It is visibility. With a 7-day free trial, you are blind for at least a week after any campaign change. You are spending money, trials are accumulating, but you do not know how many will convert until the trial period expires. And that is just the short-term blindness. The longer-term picture is more complex.
 
-When you run campaigns continuously and rotate creatives regularly, you are effectively buying different batches of users every week — some acquired in a week where a great creative was running, some in a week where you were testing something weaker, some on Meta, some on TikTok. These users do not behave identically. A user who subscribed to a yearly plan in January will potentially renew twelve months later, meaning the revenue from that campaign decision shows up a year down the line. A weekly subscriber who churns after three weeks generates a very different lifetime value from one who stays six months.
+When you run campaigns continuously and rotate creatives regularly, you are effectively buying different batches of users every week. Some acquired in a week where a great creative was running, some in a week where you were testing something weaker, some on Meta, some on TikTok. These users do not behave identically. A user who subscribed to a yearly plan in January will potentially renew twelve months later, meaning the revenue from that campaign decision shows up a year down the line. A weekly subscriber who churns after three weeks generates a very different lifetime value from one who stays six months.
 
 The question you need to be able to answer at any point is: for a specific group of users acquired during a specific period, what is the total revenue generated, and how does it compare to what was spent to acquire them?
 
-The answer is cohort monitoring. You group users by the week they first opened the app, and you track what happens to each group over time independently. For each cohort you can see the spend, the number of trial starts, how many converted to paid subscribers, how many churned, and what the total revenue looks like as the cohort ages. Early cohorts will have complete data. Recent cohorts will still have active trials — which brings us back to the blindness problem.
+The answer is cohort monitoring. You group users by the week they first opened the app, and you track what happens to each group over time independently. For each cohort you can see the spend, the number of trial starts, how many converted to paid subscribers, how many churned, and what the total revenue looks like as the cohort ages. Early cohorts will have complete data. Recent cohorts will still have active trials, which brings us back to the blindness problem.
 
 To solve this, we built a predicted ROAS calculation into our dashboard. For cohorts with trials still running, we apply a benchmark derived from the last four fully settled cohorts: their average conversion rate and average net revenue per subscriber. We multiply active trial count by that conversion rate to estimate future paid subscribers, multiply by average revenue, add the revenue already collected, and divide by total spend. It is a directional estimate, not a guarantee, but it gives us a signal within days of a campaign launching instead of waiting ten days for trials to clear.
 
-Here is what a recent Provenance cohort looks like in our dashboard — Mar 9 to Mar 15, now 16 days old:
+Here is what a recent Provenance cohort looks like in our dashboard, Mar 9 to Mar 15, now 16 days old:
 
 - Total spend: €2,173.97 (Meta + TikTok combined)
 - Users acquired: 1,963
 - Trials started: 81 (4.1% of users)
-- Trial-to-paid conversion: 51.9% — 34 yearly subscribers, 3 monthly, 5 weekly
+- Trial-to-paid conversion: 51.9% (34 yearly subscribers, 3 monthly, 5 weekly)
 
 The predicted ROAS for this cohort accounts for the active trials still running and projects their conversion based on historical benchmark. It tells us in real time whether this week of spend is trending toward profitability, so we can make decisions now rather than in two weeks.
 
