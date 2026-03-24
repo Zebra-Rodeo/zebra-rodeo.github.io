@@ -6,8 +6,6 @@ description: "A practical look at paid acquisition for mobile apps: campaign set
 author: Arnaud Aubry
 ---
 
-*By Arnaud Aubry, CEO at Nocturne, an independent mobile app studio*
-
 ---
 
 ### The App Store is a different animal than it was five years ago
@@ -69,7 +67,9 @@ More importantly, your install campaign becomes what we think of as a creative a
 
 This is why running both campaigns in parallel matters so much. The trial campaign is your revenue engine. The install campaign is how you keep that engine fed with fresh material.
 
-On the budget side: we recommend $20 per day for the install campaign and $100 per day minimum for the trial campaign, per platform. With Meta and TikTok both running, that is $240 per day, roughly $3,600 per month to run this system properly. You can do it with less, but below a certain threshold the algorithms do not have enough daily spend to learn efficiently and results will be noisier.
+On the budget side: €20 per day for the install campaign and €100 per day minimum for the trial campaign. That is €120 per day per platform, roughly €3,600 per month. Starting with a single platform at that budget is perfectly reasonable and probably enough to get meaningful signal. Running Meta and TikTok in parallel doubles the spend but also doubles the learning surface.
+
+The other thing worth saying: the trial campaign is not a pure cost. It is generating revenue. As we showed with Provenance, a ROAS above 1.0x means the campaign is paying for itself as it runs. The €3,600 per month is an upfront investment, but one that starts returning relatively quickly if conversion is healthy. If you have a tighter budget, you can run with less — but the lower the daily spend, the longer you need to leave campaigns running before drawing conclusions. The algorithms need volume to learn.
 
 ---
 
@@ -107,8 +107,8 @@ To solve this, we built a predicted ROAS calculation into our dashboard. For coh
 
 Here is what a recent Provenance cohort looks like in our dashboard, Mar 9 to Mar 15, now 16 days old:
 
-<figure>
-<img src="/assets/images/provenance-cohort-mar9.png" alt="Provenance cohort dashboard">
+<figure style="text-align:center">
+<img src="/assets/images/provenance-cohort-mar9.png" alt="Provenance cohort dashboard" style="max-height:320px;width:auto;max-width:100%">
 <figcaption>Mar 9 to Mar 15 cohort: €2,173 spend, 1,963 users acquired, 81 paid subscribers at 51.9% conversion.</figcaption>
 </figure>
 
@@ -135,4 +135,3 @@ More posts to come on each of these in depth.
 
 ---
 
-[Arnaud Aubry](https://www.linkedin.com/in/arnaud-aubry-74928730/)
