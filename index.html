@@ -36,6 +36,11 @@ description: A small independent studio sharing what we learn running real campa
   .post-list a { display: block; }
   .post-list a:hover h2 { opacity: 0.62; }
 
+  .post-list .read-time {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.28);
+    letter-spacing: 0.03em;
+  }
   .post-list time {
     font-size: 0.78rem;
     color: rgba(255,255,255,0.28);
@@ -70,7 +75,7 @@ description: A small independent studio sharing what we learn running real campa
   {% for post in site.posts %}
   <li>
     <a href="{{ post.url }}">
-      <time>{{ post.date | date: "%B %d, %Y" }}</time>
+      <time>{{ post.date | date: "%B %d, %Y" }}</time><span class="read-time"> · {{ post.content | number_of_words | divided_by: 200 }} min read</span>
       <h2>{{ post.title }}</h2>
       {% if post.description %}
         <p class="excerpt">{{ post.description }}</p>
