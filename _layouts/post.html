@@ -109,14 +109,49 @@ layout: default
 
   .post-footer {
     margin-top: 5rem;
-    padding-top: 2rem;
+    padding-top: 2.5rem;
     border-top: 1px solid rgba(255,255,255,0.06);
   }
-  .post-footer p {
+  .post-footer .studio-note {
     font-size: 0.85rem;
     color: rgba(255,255,255,0.3);
     line-height: 1.75;
     font-style: italic;
+    margin-bottom: 2.5rem;
+  }
+  .author-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .author-card img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 0.9;
+    flex-shrink: 0;
+  }
+  .author-card .author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .author-card .author-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+  }
+  .author-card .author-name a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .author-card .author-name a:hover { opacity: 0.65; }
+  .author-card .author-role {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.32);
+    letter-spacing: 0.01em;
   }
 </style>
 
@@ -135,5 +170,12 @@ layout: default
 </div>
 
 <div class="post-footer">
-  <p>We want to be transparent about what this is. We are not a growth consultancy. We are a small independent studio running real campaigns with real money and sharing what we observe. The specific numbers in our posts will shift as we collect more data. The framework has held up.</p>
+  <p class="studio-note">We want to be transparent about what this is. We are not a growth consultancy. We are a small independent studio running real campaigns with real money and sharing what we observe. The specific numbers in our posts will shift as we collect more data. The framework has held up.</p>
+  <div class="author-card">
+    <img src="/assets/images/arnaud-aubry.png" alt="Arnaud Aubry">
+    <div class="author-info">
+      <span class="author-name"><a href="https://www.linkedin.com/in/arnaud-aubry-74928730/" target="_blank" rel="noopener">Arnaud Aubry</a></span>
+      <span class="author-role">CEO at Nocturne</span>
+    </div>
+  </div>
 </div>
