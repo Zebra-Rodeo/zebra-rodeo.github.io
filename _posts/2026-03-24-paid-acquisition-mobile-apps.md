@@ -69,25 +69,25 @@ This is why running both campaigns in parallel matters so much. The trial campai
 
 On the budget side: €20 per day for the install campaign and €100 per day minimum for the trial campaign. That is €120 per day per platform, roughly €3,600 per month. Starting with a single platform at that budget is perfectly reasonable and probably enough to get meaningful signal. Running Meta and TikTok in parallel doubles the spend but also doubles the learning surface.
 
-The other thing worth saying: the trial campaign is not a pure cost. It is generating revenue. The €3,600 per month is an upfront investment, but one that starts returning as soon as conversions come in. If you have a tighter budget, you can run with less — but the lower the daily spend, the longer you need to leave campaigns running before drawing conclusions. The algorithms need volume to learn.
+The other thing worth saying: the trial campaign is not a pure cost. It is generating revenue. The €3,600 per month is an upfront investment, but one that starts returning as soon as conversions come in. If you have a tighter budget, you can run with less, but the lower the daily spend, the longer you need to leave campaigns running before drawing conclusions. The algorithms need volume to learn.
 
 ---
 
-### Phases 3 and 4: measure profitability, then scale, then stop being blind
+### Phase 3: know your numbers, stop being blind
 
 Before you think about scaling, you need to know whether what you are running is profitable at all. This is where a lot of people skip a step, and it is an expensive skip.
 
-The metric is ROAS: Return on Ad Spend. It is the simplest possible ratio: revenue generated divided by money spent on advertising. A ROAS of 1.0x means you are breaking even. Above it you are making money and you should probably spend more. Below it you are subsidizing your users and you need to understand why before going further.
+The metric is ROAS: Return on Ad Spend. It is the simplest possible ratio: revenue generated divided by money spent on advertising. A ROAS of 1.0x means you are breaking even. Above it you are making money. Below it you are subsidizing your users and you need to understand why before going further.
 
 Calculating ROAS for a subscription app requires a bit of care because you are not selling a product at a fixed price. You are selling a trial that may or may not convert. The formula we use is:
 
-Expected revenue per trial start = conversion rate × net revenue per subscription
+Expected revenue per trial start = conversion rate x net revenue per subscription
 
 Then ROAS = expected revenue per trial start / cost per trial start
 
-Let us walk through the real Provenance numbers. Our Meta trial campaign for Provenance in the US is running at €13.64 per trial start. The yearly plan is €29. We enrolled in Apple's Small Business Program which drops the commission from 30% to 15%, so net revenue per subscription is €29 × 0.85 = €24.65. Our observed trial-to-paid conversion rate over the past few weeks is 51.9%.
+Let us walk through the real Provenance numbers. Our Meta trial campaign for Provenance in the US is running at €13.64 per trial start. The yearly plan is €29. We enrolled in Apple's Small Business Program which drops the commission from 30% to 15%, so net revenue per subscription is €29 x 0.85 = €24.65. Our observed trial-to-paid conversion rate over the past few weeks is 51.9%.
 
-Expected revenue per trial = 51.9% × €24.65 = €12.79
+Expected revenue per trial = 51.9% x €24.65 = €12.79
 
 ROAS = €12.79 / €13.64 = 0.94x
 
@@ -95,17 +95,15 @@ We are just below break-even after one month of testing. Essentially at equilibr
 
 To put the budget in perspective: at 0.94x ROAS on a €3,600/month spend, the campaign is generating roughly €3,384 in revenue. The actual net cost out of pocket is around €216 per month, not €3,600. The gross spend is the working capital you need to have available, but the real burn is much smaller when the campaign is close to break-even. A campaign at 1.2x ROAS on the same spend would be cash-positive by €720 per month, which changes the conversation entirely.
 
-Once you have a ROAS above 1.0x, scaling is straightforward in principle: increase the budget and watch unit economics. In practice, scaling changes your audience. The algorithm serves your best-converting users first, and as you increase spend it reaches deeper into a broader pool. Unit economics soften as you scale. This is expected and manageable, but you need to watch metrics closely as you push up budget. We will cover scaling in detail in a dedicated post.
-
-The harder operational problem is not scaling. It is visibility. With a 7-day free trial, you are blind for at least a week after any campaign change. You are spending money, trials are accumulating, but you do not know how many will convert until the trial period expires. And that is just the short-term blindness. The longer-term picture is more complex.
+The harder problem is visibility. With a 7-day free trial, you are blind for at least a week after any campaign change. You are spending money, trials are accumulating, but you do not know how many will convert until the trial period expires. And that is just the short-term blindness. The longer-term picture is more complex.
 
 When you run campaigns continuously and rotate creatives regularly, you are effectively buying different batches of users every week. Some acquired in a week where a great creative was running, some in a week where you were testing something weaker, some on Meta, some on TikTok. These users do not behave identically. A user who subscribed to a yearly plan in January will potentially renew twelve months later, meaning the revenue from that campaign decision shows up a year down the line. A weekly subscriber who churns after three weeks generates a very different lifetime value from one who stays six months.
 
 The question you need to be able to answer at any point is: for a specific group of users acquired during a specific period, what is the total revenue generated, and how does it compare to what was spent to acquire them?
 
-The answer is cohort monitoring. You group users by the week they first opened the app, and you track what happens to each group over time independently. For each cohort you can see the spend, the number of trial starts, how many converted to paid subscribers, how many churned, and what the total revenue looks like as the cohort ages. Early cohorts will have complete data. Recent cohorts will still have active trials, which brings us back to the blindness problem.
+The answer is cohort monitoring. You group users by the week they first opened the app, and you track what happens to each group over time independently. For each cohort you see the spend, the trial starts, how many converted, how many churned, and what total revenue looks like as the cohort ages.
 
-To solve this, we built a predicted ROAS calculation into our dashboard. For cohorts with trials still running, we apply a benchmark derived from the last four fully settled cohorts: their average conversion rate and average net revenue per subscriber. We multiply active trial count by that conversion rate to estimate future paid subscribers, multiply by average revenue, add the revenue already collected, and divide by total spend. It is a directional estimate, not a guarantee, but it gives us a signal within days of a campaign launching instead of waiting ten days for trials to clear.
+To solve the blindness problem for recent cohorts, we built a predicted ROAS calculation into our dashboard. For cohorts with trials still running, we apply a benchmark derived from the last four fully settled cohorts: their average conversion rate and average net revenue per subscriber. We multiply active trial count by that conversion rate to estimate future paid subscribers, multiply by average revenue, add the revenue already collected, and divide by total spend. It is a directional estimate, not a guarantee, but it gives us a signal within days of a campaign launching instead of waiting ten days for trials to clear.
 
 Here is what a recent Provenance cohort looks like in our dashboard, Mar 9 to Mar 15, now 16 days old:
 
@@ -114,14 +112,15 @@ Here is what a recent Provenance cohort looks like in our dashboard, Mar 9 to Ma
 <figcaption>Mar 9 to Mar 15 cohort: €2,173 spend, 1,963 users acquired, 81 paid subscribers at 51.9% conversion.</figcaption>
 </figure>
 
-- Total spend: €2,173.97 (Meta + TikTok combined)
-- Users acquired: 1,963
-- Trials started: 81 (4.1% of users)
-- Trial-to-paid conversion: 51.9% (34 yearly subscribers, 3 monthly, 5 weekly)
-
-The predicted ROAS for this cohort accounts for the active trials still running and projects their conversion based on historical benchmark. It tells us in real time whether this week of spend is trending toward profitability, so we can make decisions now rather than in two weeks.
-
 We built the dashboard on RevenueCat's API for subscription data and Meta and TikTok's reporting APIs for spend, with cohort boundaries aligned to our campaign calendar. More detail on the technical implementation in a future post.
+
+### Phase 4: scale when everything is green
+
+Once your ROAS is consistently above 1.0x and your cohorts are trending in the right direction, you have a decision to make: increase the budget and push for growth.
+
+The principle is straightforward. If a campaign is profitable at €3,600/month, it should be profitable at €10,000/month. In practice it is more nuanced. The algorithm has already served your best-converting users first. As you push up the budget, it reaches deeper into a broader audience pool and unit economics tend to soften. This is expected and manageable, but scaling requires a different level of attention to your numbers and to your creative pipeline.
+
+There is also a question of how to allocate spend intelligently across platforms, creatives, and markets as budgets grow. That is a subject we will cover in depth in a dedicated post.
 
 ---
 
