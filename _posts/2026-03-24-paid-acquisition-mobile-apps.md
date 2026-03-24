@@ -102,6 +102,9 @@ To solve this, we built a predicted ROAS calculation into our dashboard. For coh
 
 Here is what a recent Provenance cohort looks like in our dashboard, Mar 9 to Mar 15, now 16 days old:
 
+![Provenance cohort dashboard — Mar 9 to Mar 15, 51.9% trial-to-paid conversion](/assets/images/provenance-cohort-mar9.png)
+*Mar 9 to Mar 15 cohort: €2,173 spend, 1,963 users acquired, 81 paid subscribers at 51.9% conversion.*
+
 - Total spend: €2,173.97 (Meta + TikTok combined)
 - Users acquired: 1,963
 - Trials started: 81 (4.1% of users)
