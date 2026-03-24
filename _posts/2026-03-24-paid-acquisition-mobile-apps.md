@@ -107,9 +107,9 @@ To solve the blindness problem for recent cohorts, we built a predicted ROAS cal
 
 Here is what a recent Provenance cohort looks like in our dashboard, Mar 9 to Mar 15, now 16 days old:
 
-<figure style="text-align:center">
-<img src="/assets/images/provenance-cohort-mar9.png" alt="Provenance cohort dashboard" style="max-height:320px;width:auto;max-width:100%">
-<figcaption>Mar 9 to Mar 15 cohort: €2,173 spend, 1,963 users acquired, 81 paid subscribers at 51.9% conversion.</figcaption>
+<figure>
+<img src="/assets/images/provenance-cohorts-3weeks.png" alt="Provenance cohort dashboard — 3 weeks of campaigns" style="max-width:100%;border-radius:8px">
+<figcaption>Three consecutive weekly cohorts on Provenance. Mar 9–15 (16 days old): €2,174 spend, predicted ROAS 0.56x as trials are still settling. Mar 16–22 (9 days old): €2,634 spend, predicted 0.69x. Mar 23–24 (2 days old): €207 spend, predicted 1.01x — barely launched.</figcaption>
 </figure>
 
 We built the dashboard on RevenueCat's API for subscription data and Meta and TikTok's reporting APIs for spend, with cohort boundaries aligned to our campaign calendar. More detail on the technical implementation in a future post.
