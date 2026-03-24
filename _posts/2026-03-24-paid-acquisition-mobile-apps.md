@@ -16,7 +16,7 @@ AI has collapsed the skill barrier in software. Tasks that used to require a tea
 
 The natural reaction to this is anxiety. More competition means fewer users for each app, right? We thought the same thing at first and we have since changed our minds completely.
 
-When a category fills up with apps, that category gets more search traffic, more editorial attention, more cultural surface area. People discover they have a problem they need solved, and they find ten apps trying to solve it. The market does not divide — it expands. The real challenge is not that there are too many apps. The challenge is simpler and harder: getting discovered at all. That is exactly the problem paid acquisition is designed to solve.
+When a category fills up with apps, that category gets more search traffic, more editorial attention, more cultural surface area. People discover they have a problem they need solved, and they find ten apps trying to solve it. The market does not divide. It expands. The real challenge is not that there are too many apps. The challenge is simpler and harder: getting discovered at all. That is exactly the problem paid acquisition is designed to solve.
 
 ---
 
@@ -30,9 +30,9 @@ Paid acquisition is the way out. You buy a first wave of users. Those users leav
 
 There is a second reason to run paid campaigns that is less obvious: you need data. If you never buy users, you genuinely do not know whether your product converts. You do not know what percentage of people who hit your paywall actually subscribe. You do not know your D1 retention. Paid acquisition is your measurement instrument as much as it is your growth engine.
 
-Before you spend a single dollar, a few things need to be in place. You need your tracking pixels integrated into the app for Meta and TikTok. You need a Mobile Measurement Partner (we use AppsFlyer) to handle attribution and relay events back to the ad platforms. You should be tracking at minimum D1 and D7 retention — how many users return one day after install, and how many return after seven days. These two numbers will tell you more about your app health than almost anything else.
+Before you spend a single dollar, a few things need to be in place. You need your tracking pixels integrated into the app for Meta and TikTok. You need a Mobile Measurement Partner (we use AppsFlyer) to handle attribution and relay events back to the ad platforms. You should be tracking at minimum D1 and D7 retention: how many users return one day after install, and how many return after seven days. These two numbers will tell you more about your app health than almost anything else.
 
-Your onboarding needs to be built around conversion. We have observed consistently that over 80% of conversions happen at the paywall on the very first session. Attention peaks the moment someone installs your app and drops fast after that. If you bury your paywall three sessions in, you have already lost most of the people who would have subscribed. Hit them early. Ask for a store review during onboarding — it feeds the organic search algorithm. First launch is your peak moment of attention, build your product to capture it.
+Your onboarding needs to be built around conversion. We have observed consistently that over 80% of conversions happen at the paywall on the very first session. Attention peaks the moment someone installs your app and drops fast after that. If you bury your paywall three sessions in, you have already lost most of the people who would have subscribed. Hit them early. Ask for a store review during onboarding. It feeds the organic search algorithm. First launch is your peak moment of attention, build your product to capture it.
 
 ---
 
@@ -42,7 +42,7 @@ The goal of the first campaign is not to be profitable. The goal is to generate 
 
 Run $20 per day per platform. We test Meta and TikTok simultaneously from day one. They reach different people through different content formats, and what converts on TikTok can look completely different from what converts on Meta. You want to understand both.
 
-The metric to watch is CPI, Cost Per Install. For US users, we target below $1.20. US users cost more because they spend more. A $0.60 install from a market where subscriptions do not convert is worth less than a $1.10 install from someone with five active subscriptions on their phone. Cheap installs from the wrong market are not cheap at all. On Provenance, our install campaign runs at €0.78 per US install — well inside that threshold.
+The metric to watch is CPI, Cost Per Install. For US users, we target below $1.20. US users cost more because they spend more. A $0.60 install from a market where subscriptions do not convert is worth less than a $1.10 install from someone with five active subscriptions on their phone. Cheap installs from the wrong market are not cheap at all. On Provenance, our install campaign runs at €0.78 per US install, well inside that threshold.
 
 Run each creative for a minimum of 48 hours before drawing conclusions, maximum 72 hours. The temptation to kill a creative after a bad first day is real and almost always wrong. Algorithms need time to learn.
 
@@ -88,7 +88,7 @@ ROAS = €12.79 / €13.64 = 0.94x
 
 We are just below break-even after one month of testing. Essentially at equilibrium. That is actually a reasonable place to be at this stage. We know the conversion rate is solid, the creative is finding the right audience, and the main lever now is bringing that cost per trial down through better creatives. Getting it from €13.64 to €12 would push ROAS above 1.0x and make the campaign cleanly profitable.
 
-Once you have a ROAS above 1.0x, scaling is straightforward in principle: increase the budget and watch unit economics. In practice, scaling changes your audience — the algorithm serves your best-converting users first, and as you increase spend it reaches deeper into a broader pool. Unit economics soften as you scale. This is expected and manageable, but you need to watch metrics closely as you push up budget. We will cover scaling in detail in a dedicated post.
+Once you have a ROAS above 1.0x, scaling is straightforward in principle: increase the budget and watch unit economics. In practice, scaling changes your audience. The algorithm serves your best-converting users first, and as you increase spend it reaches deeper into a broader pool. Unit economics soften as you scale. This is expected and manageable, but you need to watch metrics closely as you push up budget. We will cover scaling in detail in a dedicated post.
 
 The harder operational problem is not scaling. It is visibility. With a 7-day free trial, you are blind for at least a week after any campaign change. You are spending money, trials are accumulating, but you do not know how many will convert until the trial period expires. And that is just the short-term blindness. The longer-term picture is more complex.
 
