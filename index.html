@@ -1,25 +1,48 @@
 ---
 layout: default
-title: Nocturne , Field Notes on Building Mobile Apps
+title: Notes from building things
 description: A small independent studio sharing what we learn running real campaigns with real money.
 ---
 <style>
-  .index-intro {
-    margin-bottom: 5rem;
+  .profile-capsule {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 4.5rem;
+    padding: 1.75rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
   }
-  .index-intro h1 {
-    font-size: clamp(1.4rem, 4vw, 1.9rem);
+  .profile-capsule img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid rgba(255,255,255,0.1);
+  }
+  .profile-capsule-text h1 {
+    font-size: 1.15rem;
     font-weight: 700;
-    letter-spacing: -0.02em;
     color: #fff;
-    margin-bottom: 0.9rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.35rem;
     line-height: 1.3;
   }
-  .index-intro p {
-    color: rgba(255,255,255,0.38);
-    font-size: 0.92rem;
-    line-height: 1.7;
-    max-width: 440px;
+  .profile-capsule-text p {
+    color: rgba(255,255,255,0.42);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .profile-capsule-text a {
+    color: rgba(255,255,255,0.58);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .profile-capsule-text a:hover {
+    color: #fff;
   }
 
   .post-list {
@@ -69,9 +92,12 @@ description: A small independent studio sharing what we learn running real campa
   }
 </style>
 
-<div class="index-intro">
-  <h1>Notes from building things.</h1>
-  <p>Experiments, learnings, and observations. By <a href="https://www.linkedin.com/in/arnaud-aubry-74928730/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.55);text-decoration:underline;text-underline-offset:3px">Arnaud Aubry</a>.</p>
+<div class="profile-capsule">
+  <img src="/assets/images/arnaud-aubry.png" alt="Arnaud Aubry">
+  <div class="profile-capsule-text">
+    <h1>Notes from building things.</h1>
+    <p>I'm <a href="https://www.linkedin.com/in/arnaud-aubry-74928730/" target="_blank" rel="noopener">Arnaud Aubry</a>. I build mobile apps and share what I learn along the way: paid acquisition, data tooling, monetization, the works.</p>
+  </div>
 </div>
 
 {% if site.posts.size > 0 %}
