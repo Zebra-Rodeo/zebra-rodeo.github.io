@@ -112,7 +112,7 @@ Here is what a recent Provenance cohort looks like in our dashboard, Mar 9 to Ma
 <figcaption>Three consecutive weekly cohorts on Provenance. Mar 9–15 (16 days old): €2,174 spend, predicted ROAS 0.56x as trials are still settling. Mar 16–22 (9 days old): €2,634 spend, predicted 0.69x. Mar 23–24 (2 days old): €207 spend, predicted 1.01x — barely launched.</figcaption>
 </figure>
 
-We built the dashboard on RevenueCat's API for subscription data and Meta and TikTok's reporting APIs for spend, with cohort boundaries aligned to our campaign calendar. More detail on the technical implementation in a future post.
+We built the dashboard on RevenueCat's API for subscription data and Meta and TikTok's reporting APIs for spend, with cohort boundaries aligned to our campaign calendar. We wrote a [dedicated post on how it is built and why](/blog/building-our-roas-dashboard/).
 
 ### Phase 4: scale when everything is green
 
