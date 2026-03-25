@@ -75,7 +75,7 @@ Apple also provides a transaction webhook you can configure per app, which deliv
 
 We use AppsFlyer. It works well for our current setup: two iOS apps, Meta and TikTok on both, one team managing campaigns across both.
 
-Is it irreplaceable? Probably not. The attribution layer is genuinely useful, but the analytics dashboard it provides overlaps significantly with what we built ourselves. Our cohort ROAS dashboard gives us per-week spend attribution, predicted revenue based on trial conversion rates, and LTV modeling across subscription types. These are features that approximate a good chunk of what AppsFlyer's analytics layer offers, built specifically around how our apps monetize.
+Is it irreplaceable? Probably not. The attribution layer is genuinely useful, but the analytics dashboard it provides overlaps significantly with what we built ourselves. Our [cohort ROAS dashboard](/blog/building-our-roas-dashboard/) gives us per-week spend attribution, predicted revenue based on trial conversion rates, and LTV modeling across subscription types. These are features that approximate a good chunk of what AppsFlyer's analytics layer offers, built specifically around how our apps monetize.
 
 We are currently evaluating whether to stay on the free plan, move to a paid plan as volume grows, or eventually replace the attribution dependency with a more custom server-to-server setup using RevenueCat webhooks as the primary event source. The right answer depends on how the portfolio evolves. With vibe coding making custom tooling increasingly accessible, replacing parts of the paid analytics stack is a realistic option that was not a few years ago.
 
@@ -90,6 +90,3 @@ Introduce one when complexity requires it. Two platforms, two apps, multiple peo
 
 Regardless of what you use: prioritize server-to-server. Events that fire without user action, at the infrastructure level, are the only reliable way to capture the full revenue picture from a subscription business.
 
----
-
-*Arnaud Aubry is building mobile apps and sharing what he learns.*
