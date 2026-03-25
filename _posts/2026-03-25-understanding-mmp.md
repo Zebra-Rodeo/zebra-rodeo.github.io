@@ -57,7 +57,7 @@ The calculus changes with complexity. If you are running two apps across Meta an
 
 Add a second operating system, Android alongside iOS, and attribution becomes significantly more complex given the different platform rules and signal constraints. Add a third ad network. Add regional campaigns with different targeting. At that point, an MMP is not a luxury. It is the only realistic way to keep your data clean and your feedback loops functioning.
 
-Our current rule of thumb: one app, one platform — probably not worth it. Two or more apps, two or more platforms: the math starts working. Portfolio approach with multiple operating systems: essentially required.
+Our current rule of thumb: one app, one platform, probably not worth it. Two or more apps, two or more platforms: the math starts working. Portfolio approach with multiple operating systems: essentially required.
 
 
 ### Server-to-server tracking, and why it beats in-app events
