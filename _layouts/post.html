@@ -2,224 +2,152 @@
 layout: default
 ---
 <style>
-  .post-title{
-    font-family:var(--titre);
-    font-weight:700;
-    font-size:clamp(2.1rem,7vw,3.1rem);
-    line-height:1.05;
-    letter-spacing:-.02em;
-    margin-bottom:1rem;
-    text-wrap:balance;
+  /* --- Une ouverture de page d'accueil plutot qu'un chapeau d'article --- */
+  .hero{background:var(--sable);color:var(--sable-encre);padding-block:clamp(2.5rem,7vw,4.5rem) clamp(2.5rem,7vw,4rem)}
+  .hero-grille{display:grid;gap:clamp(2rem,5vw,3.5rem);align-items:center;max-width:58rem;margin-inline:auto;padding-inline:max(1.5rem, env(safe-area-inset-left, 0px))}
+  @media (min-width:58rem){.hero-grille{grid-template-columns:1fr .82fr}}
+  .hero-texte{min-width:0;max-width:34rem}
+  .hero .etiquette{
+    font-family:var(--data);font-size:.6875rem;font-weight:500;letter-spacing:.16em;
+    text-transform:uppercase;opacity:.55;margin-bottom:1.4rem;
   }
-  .post-meta{
-    font-family:var(--data);
-    font-size:.75rem;
-    letter-spacing:.06em;
-    color:var(--encre-douce);
-    padding-bottom:1.75rem;
-    border-bottom:1px solid var(--trait);
-    margin-bottom:2.5rem;
+  .hero h1{
+    font-family:var(--titre);font-weight:700;
+    font-size:clamp(2.4rem,8vw,4.2rem);line-height:1;letter-spacing:-.025em;
+    margin-bottom:.5em;text-wrap:balance;
   }
+  .hero .chapeau{font-size:clamp(1.0625rem,2.6vw,1.1875rem);line-height:1.6;opacity:.82;margin-bottom:1.6rem;text-wrap:pretty}
+  .hero .date{font-family:var(--data);font-size:.75rem;letter-spacing:.05em;opacity:.5;border-top:1px solid currentColor;padding-top:.9rem;display:inline-block}
+  .hero figure{margin:0;min-width:0}
+  .hero figure img{display:block;width:100%;height:auto;border-radius:5px;box-shadow:0 1px 2px rgba(0,0,0,.1),0 18px 40px -18px rgba(0,0,0,.45)}
 
-  .post-body{font-size:1.0625rem;line-height:1.72}
-  .post-body > p,
-  .post-body > ul,
-  .post-body > ol,
-  .post-body > h2,
-  .post-body > h3,
-  .post-body > .label,
-  .post-body > blockquote{max-width:36rem}
+  /* --- Le corps : chaque bloc se centre, les bandes vont d'un bord a l'autre --- */
+  .post-body{font-size:1.0625rem;line-height:1.72;padding-block:clamp(2.5rem,6vw,4rem) 0}
+  .post-body > *{
+    max-width:39rem;margin-inline:auto;
+    padding-inline:max(1.5rem, env(safe-area-inset-left, 0px));
+  }
   .post-body p{margin-bottom:1.2em}
   .post-body h2{
-    font-family:var(--titre);
-    font-weight:600;
-    font-size:clamp(1.5rem,4.6vw,2rem);
-    line-height:1.18;
-    letter-spacing:-.01em;
-    margin:.4em 0 .8em;
-    text-wrap:balance;
+    font-family:var(--titre);font-weight:600;
+    font-size:clamp(1.55rem,4.6vw,2.05rem);line-height:1.15;letter-spacing:-.012em;
+    margin:.4em auto .75em;text-wrap:balance;
   }
-  .post-body h3{
-    font-family:var(--titre);
-    font-weight:600;
-    font-size:1.1875rem;
-    line-height:1.3;
-    margin:2.2em 0 .6em;
-  }
-  .post-body ul,.post-body ol{margin:0 0 1.4rem 1.3rem}
+  .post-body h3{font-family:var(--titre);font-weight:600;font-size:1.1875rem;line-height:1.3;margin:2.1em auto .6em}
+  .post-body ul,.post-body ol{margin-bottom:1.4rem;padding-left:1.3rem}
   .post-body li{margin-bottom:.4rem}
   .post-body strong{font-weight:600}
-  .post-body a{
-    color:var(--laiton);
-    text-decoration:underline;
-    text-decoration-thickness:1px;
-    text-underline-offset:3px;
-  }
+  .post-body a{color:var(--laiton);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
   .post-body hr{display:none}
 
-  /* L'etiquette qui ouvre une section, et le jalon de version a sa droite. */
+  /* --- L'etiquette de section, avec son jalon de version --- */
   .label{
-    display:flex;
-    align-items:baseline;
-    gap:.7rem;
-    font-family:var(--data);
-    font-size:.6875rem;
-    font-weight:500;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--laiton);
-    margin:3.5rem 0 .4rem;
+    display:flex;align-items:baseline;gap:.7rem;
+    font-family:var(--data);font-size:.6875rem;font-weight:500;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--laiton);margin:3.75rem auto .4rem;
   }
   .label .jalon{
-    font-weight:400;
-    letter-spacing:.08em;
-    color:var(--encre-douce);
-    border:1px solid var(--trait);
-    border-radius:2px;
-    padding:.1rem .4rem;
-    white-space:nowrap;
+    font-weight:400;letter-spacing:.08em;color:var(--encre-douce);
+    border:1px solid var(--trait);border-radius:2px;padding:.1rem .4rem;white-space:nowrap;
   }
-  .post-body .label + h2{margin-top:0}
+  .label + h2{margin-top:0}
 
-  /* Images : elles debordent legerement de la colonne de texte. */
-  .post-body figure{margin:2.5rem 0}
-  .post-body figure img{
-    display:block;
-    width:100%;
-    height:auto;
-    border-radius:4px;
-    background:var(--surface);
-  }
-  .post-body figcaption{
-    font-family:var(--data);
-    font-size:.75rem;
-    line-height:1.6;
-    color:var(--encre-douce);
-    margin-top:.7rem;
-    max-width:36rem;
-  }
-  .post-body .duo{display:grid;grid-template-columns:1fr;gap:1.25rem;margin:2.5rem 0}
-  @media (min-width:34rem){.post-body .duo{grid-template-columns:1fr 1fr}}
+  /* --- Images --- */
+  .post-body figure{margin-block:2.5rem}
+  .post-body figure img{display:block;width:100%;height:auto;border-radius:4px;background:var(--surface)}
+  .post-body figcaption{font-family:var(--data);font-size:.75rem;line-height:1.6;color:var(--encre-douce);margin-top:.7rem}
+  .post-body .duo{display:grid;grid-template-columns:1fr;gap:1.25rem;margin-block:2.5rem}
+  @media (min-width:36rem){.post-body .duo{grid-template-columns:1fr 1fr}}
   .post-body .duo figure{margin:0;min-width:0}
-  .post-body .video{max-width:20rem;margin-inline:auto}
-  .post-body .video video{
-    display:block;width:100%;height:auto;border-radius:4px;background:#000;
+  .post-body .video{max-width:22rem}
+  .post-body .video video{display:block;width:100%;height:auto;border-radius:4px;background:#000}
+
+  /* --- Les bandes : elles coupent l'article et le rendent respirable --- */
+  .post-body > .bande{
+    max-width:none;margin-block:clamp(3rem,7vw,4.5rem);
+    padding-block:clamp(2.5rem,6vw,3.5rem);
+    padding-inline:max(1.5rem, calc(50% - 18rem));
+    background:var(--bande);color:var(--encre);
+  }
+  /* Dans une bande, ce sont les jetons qui changent, pas chaque regle :
+     tout ce qui est imbrique suit sans avoir ete prevu. */
+  .bande{
+    --encre:var(--bande-encre);
+    --encre-douce:var(--bande-douce);
+    --laiton:var(--bande-accent);
+    --trait:rgba(237,241,234,.22);
+    --surface:rgba(237,241,234,.07);
+    --papier:var(--bande);
+  }
+  .bande h3{margin-top:0}
+  .bande .label{margin-top:0}
+  .bande > p:last-child{margin-bottom:0}
+
+  .post-body > .bande.sable{
+    background:var(--sable);
+    --encre:var(--sable-encre);
+    --encre-douce:color-mix(in srgb, var(--sable-encre) 62%, transparent);
+    --laiton:#8a5f14;
+    --trait:color-mix(in srgb, var(--sable-encre) 18%, transparent);
+    --surface:color-mix(in srgb, var(--sable-encre) 7%, transparent);
+    --papier:var(--sable);
   }
 
-  /* Note d'atelier : l'aparte technique, qu'on peut sauter. */
-  .post-body .note{
-    background:var(--surface);
-    border:1px solid var(--trait);
-    border-left:3px solid var(--laiton);
-    border-radius:4px;
-    padding:1.8rem 1.9rem .6rem;
-    margin:3.5rem 0;
-  }
-  .post-body .note .label{margin:0 0 .9rem}
-  .post-body .note h3{margin-top:0}
-  .post-body .note > p:last-child{margin-bottom:1.3rem}
-  .post-body .note figure{margin:1.8rem 0}
-
-  /* Releve : une sortie de console ou un tableau de mesures. */
+  /* --- Releve de console --- */
   .post-body .releve{
-    display:grid;
-    grid-template-columns:auto 1fr;
-    gap:.1rem 1.4rem;
-    margin:2.2rem 0;
-    padding:1.1rem 1.3rem;
-    background:var(--surface);
-    border:1px solid var(--trait);
-    border-radius:4px;
-    font-family:var(--data);
-    font-size:.8125rem;
-    line-height:1.75;
-    overflow-x:auto;
+    display:grid;grid-template-columns:auto 1fr;gap:.1rem 1.4rem;margin-block:2.2rem;
+    padding:1.1rem 1.3rem;background:var(--surface);border:1px solid var(--trait);border-radius:4px;
+    font-family:var(--data);font-size:.8125rem;line-height:1.75;overflow-x:auto;
   }
   .post-body .releve dt{color:var(--encre-douce);white-space:nowrap}
   .post-body .releve dd{margin:0;font-variant-numeric:tabular-nums;min-width:0}
 
-  /* Etagere : des cases de meme poids, cote a cote. */
+  /* --- Etagere : des cases de meme poids --- */
   .post-body .etagere{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));
-    gap:1px;
-    background:var(--trait);
-    border:1px solid var(--trait);
-    border-radius:4px;
-    overflow:hidden;
-    margin:2.5rem 0;
+    display:grid;grid-template-columns:1fr;gap:1px;
+    background:var(--trait);border:1px solid var(--trait);border-radius:4px;overflow:hidden;
+    margin-block:2.5rem;
   }
+  @media (min-width:36rem){.post-body .etagere{grid-template-columns:repeat(3,1fr)}}
   .post-body .etagere > div{background:var(--papier);padding:1.15rem 1.3rem;min-width:0}
   .post-body .etagere h4{
-    font-family:var(--data);
-    font-size:.6875rem;
-    font-weight:500;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    color:var(--laiton);
-    margin:0 0 .45rem;
+    font-family:var(--data);font-size:.6875rem;font-weight:500;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--laiton);margin:0 0 .45rem;
   }
-  .post-body .etagere p{font-size:.9375rem;line-height:1.55;margin:0;color:var(--encre-douce)}
+  .post-body .etagere p{font-size:.9375rem;line-height:1.55;margin:0;opacity:.78}
 
-  .post-body code{
-    font-family:var(--data);
-    font-size:.875em;
-    background:var(--surface);
-    padding:.1em .35em;
-    border-radius:3px;
-  }
-  .post-body pre{
-    background:var(--surface);
-    border:1px solid var(--trait);
-    border-radius:4px;
-    padding:1.3rem;
-    overflow-x:auto;
-    margin:2.2rem 0;
-    font-size:.8125rem;
-  }
+  .post-body code{font-family:var(--data);font-size:.875em;background:var(--surface);padding:.1em .35em;border-radius:3px}
+  .post-body pre{background:var(--surface);border:1px solid var(--trait);border-radius:4px;padding:1.3rem;overflow-x:auto;margin-block:2.2rem;font-size:.8125rem}
   .post-body pre code{background:none;padding:0}
-  .post-body blockquote{
-    border-left:2px solid var(--trait);
-    margin:2.2rem 0;
-    padding:.1rem 1.4rem;
-    color:var(--encre-douce);
-    font-style:italic;
-  }
+  .post-body blockquote{border-left:2px solid var(--trait);padding:.1rem 1.4rem;color:var(--encre-douce);font-style:italic;margin-block:2.2rem}
 
-  .post-footer{
-    margin-top:4.5rem;
-    padding-top:2.25rem;
-    border-top:1px solid var(--trait);
-    max-width:36rem;
-  }
-  .post-footer .studio-note{
-    font-size:.9rem;
-    color:var(--encre-douce);
-    line-height:1.7;
-    font-style:italic;
-    margin-bottom:2.25rem;
-  }
+  /* --- Pied d'article --- */
+  .post-footer{margin-top:4.5rem;padding-top:2.25rem;border-top:1px solid var(--trait);max-width:39rem;margin-inline:auto;padding-inline:max(1.5rem, env(safe-area-inset-left, 0px))}
+  .post-footer .studio-note{font-size:.9rem;color:var(--encre-douce);line-height:1.7;font-style:italic;margin-bottom:2.25rem}
   .author-card{display:flex;align-items:center;gap:1.1rem}
-  .author-card img{
-    width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;
-    background:var(--surface);
-  }
+  .author-card img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;background:var(--surface)}
   .author-card .author-info{display:flex;flex-direction:column}
   .author-card .author-name{font-size:.9375rem;font-weight:600}
   .author-card .author-name a{color:inherit;text-decoration:none}
   .author-card .author-name a:hover{color:var(--laiton)}
-  .author-card .author-role{
-    font-family:var(--data);
-    font-size:.75rem;
-    color:var(--encre-douce);
-  }
+  .author-card .author-role{font-family:var(--data);font-size:.75rem;color:var(--encre-douce)}
 </style>
 
-<h1 class="post-title">{{ page.title }}</h1>
-
-<p class="post-meta">
-  <time>{% if page.date_display %}{{ page.date_display }}{% else %}{{ page.date | date: "%B %d, %Y" }}{% endif %}</time>
-</p>
+<section class="hero">
+  <div class="hero-grille">
+    <div class="hero-texte">
+      {% if page.etiquette %}<p class="etiquette">{{ page.etiquette }}</p>{% endif %}
+      <h1>{{ page.hero_title | default: page.title }}</h1>
+      {% if page.chapeau %}<p class="chapeau">{{ page.chapeau }}</p>{% endif %}
+      <p class="date">{% if page.date_display %}{{ page.date_display }}{% else %}{{ page.date | date: "%B %d, %Y" }}{% endif %}</p>
+    </div>
+    {% if page.hero_image %}
+    <figure>
+      <img src="{{ page.hero_image }}" alt="{{ page.hero_alt }}" width="{{ page.hero_width | default: 1050 }}" height="{{ page.hero_height | default: 1400 }}">
+    </figure>
+    {% endif %}
+  </div>
+</section>
 
 <div class="post-body">
   {{ content }}
