@@ -1,5 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+{%- comment -%}
+  Deux langues, une page par langue, appariees par la cle `ref` du front
+  matter. Le francais vit a l'adresse d'origine, l'anglais sous /en/ : les
+  liens deja partages ne bougent pas.
+{%- endcomment -%}
+{%- assign langue = page.lang | default: site.lang | default: 'en' -%}
+{%- assign jumelle = nil -%}
+{%- if page.ref -%}
+  {%- assign candidates = site.pages | concat: site.posts | where: "ref", page.ref -%}
+  {%- for c in candidates -%}{%- if c.lang != langue -%}{%- assign jumelle = c -%}{%- endif -%}{%- endfor -%}
+{%- endif -%}
+<html lang="{{ langue }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -13,6 +24,26 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/favicon/site.webmanifest">
   {% seo %}
+  {%- if jumelle %}
+  <link rel="alternate" hreflang="{{ langue }}" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="{{ jumelle.lang }}" href="{{ jumelle.url | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{% if langue == 'fr' %}{{ page.url | absolute_url }}{% else %}{{ jumelle.url | absolute_url }}{% endif %}">
+  <script>
+    /* La version francaise est la page par defaut : un navigateur qui ne
+       parle pas francais y est renvoye vers l'anglais, une seule fois, et
+       jamais dans l'autre sens. Quelqu'un qui ouvre volontairement un lien
+       /en/ y reste, et un choix fait dans l'en-tete est retenu. */
+    (function () {
+      try {
+        if ('{{ langue }}' !== 'fr') return;
+        var choisie = localStorage.getItem('langue');
+        if (choisie) { if (choisie !== 'fr') location.replace('{{ jumelle.url }}'); return; }
+        var navigateur = (navigator.language || '').toLowerCase();
+        if (navigateur.slice(0, 2) !== 'fr') location.replace('{{ jumelle.url }}');
+      } catch (e) {}
+    })();
+  </script>
+  {%- endif %}
   <style>
     /* Papier chaud par defaut, et l'identite sombre du site quand le lecteur
        la demande. Toutes les couleurs passent par ces jetons : aucune valeur
@@ -102,6 +133,12 @@
       transition:color .15s;
     }
     header nav a:hover{color:var(--laiton)}
+    header nav{display:flex;align-items:center;gap:1.25rem}
+    .langues{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--data);
+             font-size:.6875rem;letter-spacing:.14em}
+    .langues>*{color:var(--encre-douce)}
+    .langues [aria-current]{color:var(--encre)}
+    .langues::before{content:"";width:1px;height:.9em;background:var(--trait);margin-right:.4rem}
 
     /* La colonne n'est plus portee par main : chaque bloc se contraint
        lui-meme, ce qui laisse les bandes de couleur aller d'un bord a
@@ -144,7 +181,14 @@
       <img src="/zebra_rodeo_light.png" alt="Zebra Rodeo">
     </a>
     <nav>
-      <a href="/">Blog</a>
+      <a href="{% if langue == 'fr' %}/{% else %}/en/{% endif %}">Blog</a>
+      {%- if jumelle %}
+      <span class="langues">
+        <span aria-current="true">{{ langue | upcase }}</span>
+        <a href="{{ jumelle.url }}" hreflang="{{ jumelle.lang }}" lang="{{ jumelle.lang }}"
+           onclick="try{localStorage.setItem('langue','{{ jumelle.lang }}')}catch(e){}">{{ jumelle.lang | upcase }}</a>
+      </span>
+      {%- endif %}
     </nav>
   </header>
 

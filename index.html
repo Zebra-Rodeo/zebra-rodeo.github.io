@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Zebra Rodeo
+lang: fr
+ref: accueil
+description: "Notes de fabrication, par Arnaud Aubry. Des carnets de projets, du code et des objets."
 ---
 <style>
   .accueil{display:flex;flex-direction:column;align-items:center;text-align:center;gap:2.5rem;padding-block:clamp(2rem,8vw,5rem)}
@@ -17,12 +20,13 @@ title: Zebra Rodeo
 
 <div class="accueil">
   <img src="/zebra_rodeo_light.png" alt="Zebra Rodeo">
-  <p>Notes from building things, by Arnaud Aubry.</p>
+  <p>Notes de fabrication, par Arnaud Aubry.</p>
 </div>
 
-{% if site.posts.size > 0 %}
+{% assign billets = site.posts | where: "lang", "fr" %}
+{% if billets.size > 0 %}
 <nav class="billets">
-  {% for post in site.posts %}
+  {% for post in billets %}
   <a href="{{ post.url }}">
     <span class="date">{% if post.date_display %}{{ post.date_display }}{% else %}{{ post.date | date: "%B %d, %Y" }}{% endif %}</span>
     <span class="titre">{{ post.title }}</span>
